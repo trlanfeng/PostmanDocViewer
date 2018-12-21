@@ -1,0 +1,140 @@
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  font-size: 14px;
+}
+#app {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+#app .page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  margin: 0;
+}
+#app .page .menu {
+  width: 300px;
+  background-color: #EAF3FA;
+  border-right: 1px solid #c1dbf0;
+  overflow: auto;
+}
+#app .page .menu .page_title {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  width: 250px;
+  margin: 30px auto 20px;
+  border-radius: 5px;
+  background-color: #4595d3;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+#app .page .menu ul {
+  font-size: 14px;
+  list-style: none;
+  overflow: auto;
+  padding: 15px 20px;
+}
+#app .page .menu ul li {
+  height: 20px;
+  line-height: 20px;
+  margin-bottom: 15px;
+}
+#app .page .menu ul li span {
+  display: inline-block;
+  width: 50px;
+  border-radius: 2px;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+  margin-right: 10px;
+}
+#app .page .container-fluid {
+  flex: 1;
+  padding: 30px;
+  overflow: auto;
+}
+#app .page .container-fluid .one {
+  max-width: 1000px;
+  margin-bottom: 20px;
+}
+#app .page .container-fluid .one h3 {
+  margin-bottom: 20px;
+}
+#app .page .container-fluid .one .title {
+  height: 40px;
+  line-height: 40px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+#app .page .container-fluid .one .req_url {
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  display: flex;
+  align-items: stretch;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+}
+#app .page .container-fluid .one .req_url .http_method {
+  width: 70px;
+  text-align: center;
+  border-radius: 2px;
+  color: white;
+  line-height: 38px;
+  font-weight: bold;
+}
+#app .page .container-fluid .one .req_url .url {
+  padding-left: 20px;
+  flex: 1;
+  font-family: "Monaco", "Consola", "微软雅黑";
+}
+#app .page .container-fluid .one .res_body {
+  margin-bottom: 30px;
+}
+#app .page .container-fluid .one .jsoneditor-tree {
+  overflow: hidden;
+}
+.GET {
+  background-color: #FFA344;
+  border-color: #FFA344;
+}
+.GET .url {
+  background-color: #ffffff;
+}
+.POST {
+  background-color: #25CC92;
+  border-color: #25CC92;
+}
+.POST .url {
+  background-color: #c8f5e5;
+}
+.PUT {
+  background-color: #63A9FA;
+  border-color: #63A9FA;
+}
+.PUT .url {
+  background-color: #ffffff;
+}
+.PATCH {
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+.PATCH .url {
+  background-color: #a7e9f4;
+}
+.DELETE {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+.DELETE .url {
+  background-color: #fae3e5;
+}

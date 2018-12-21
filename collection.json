@@ -1,0 +1,2411 @@
+{
+	"info": {
+		"name": "汽车大逃杀",
+		"_postman_id": "c05c28a5-eda7-438d-8d62-3fc2cec22c78",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "用户 - 新增",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "132d04f0-4ee0-434c-9748-ea4c33939287",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "openid",
+							"value": "111",
+							"description": "用户微信openid",
+							"type": "text"
+						},
+						{
+							"key": "nickname",
+							"value": "dsff",
+							"description": "用户昵称",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"value": "http://p3.pstatp.com/large/eba000edcf7ab39791d",
+							"description": "头像地址",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "1",
+							"description": "性别，值为1时是男性，值为2时是女性，值为0时是未知",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "上海地址",
+							"description": "地址",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:7001/api/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"users"
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "7744ce02-e039-4c0e-b93a-2e1e812b6a9b",
+					"name": "成功",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "openid",
+									"value": "111",
+									"description": "用户微信openid",
+									"type": "text"
+								},
+								{
+									"key": "nickname",
+									"value": "dsff",
+									"description": "用户昵称",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"value": "http://p3.pstatp.com/large/eba000edcf7ab39791d",
+									"description": "头像地址",
+									"type": "text"
+								},
+								{
+									"key": "sex",
+									"value": "1",
+									"description": "性别，值为1时是男性，值为2时是女性，值为0时是未知",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "上海地址",
+									"description": "地址",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:7001/api/users",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "7001",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Accept-Ranges",
+							"value": "bytes",
+							"name": "Accept-Ranges",
+							"description": "Content-Types that are acceptable"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 16 Apr 2018 03:57:10 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "content-length",
+							"value": "13",
+							"name": "content-length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"name": "content-type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "keep-alive",
+							"value": "timeout=5",
+							"name": "keep-alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff",
+							"name": "x-content-type-options",
+							"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+						},
+						{
+							"key": "x-download-options",
+							"value": "noopen",
+							"name": "x-download-options",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN",
+							"name": "x-frame-options",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						},
+						{
+							"key": "x-readtime",
+							"value": "191",
+							"name": "x-readtime",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "1; mode=block",
+							"name": "x-xss-protection",
+							"description": "Cross-site scripting (XSS) filter"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Tue Jan 19 2038 11:14:07 GMT+0800 (中国标准时间)",
+							"httpOnly": false,
+							"domain": "127.0.0.1",
+							"path": "/",
+							"secure": false,
+							"value": "ghh1WNijnBf1RwoXQgingGAH",
+							"key": "csrfToken"
+						}
+					],
+					"body": "{\"user_id\":6}"
+				}
+			]
+		},
+		{
+			"name": "用户 - 详情",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "132d04f0-4ee0-434c-9748-ea4c33939287",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:7001/api/users/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"users",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "4b31a0a7-0101-47e3-bc14-be6913108c83",
+					"name": "成功",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://127.0.0.1:7001/api/users/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "7001",
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Accept-Ranges",
+							"value": "bytes",
+							"name": "Accept-Ranges",
+							"description": "Content-Types that are acceptable"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 10 Apr 2018 03:01:58 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "content-length",
+							"value": "394",
+							"name": "content-length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"name": "content-type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "keep-alive",
+							"value": "timeout=5",
+							"name": "keep-alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff",
+							"name": "x-content-type-options",
+							"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+						},
+						{
+							"key": "x-download-options",
+							"value": "noopen",
+							"name": "x-download-options",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN",
+							"name": "x-frame-options",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						},
+						{
+							"key": "x-readtime",
+							"value": "4",
+							"name": "x-readtime",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "1; mode=block",
+							"name": "x-xss-protection",
+							"description": "Cross-site scripting (XSS) filter"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Tue Jan 19 2038 11:14:07 GMT+0800 (中国标准时间)",
+							"httpOnly": false,
+							"domain": "127.0.0.1",
+							"path": "/",
+							"secure": false,
+							"value": "ghh1WNijnBf1RwoXQgingGAH",
+							"key": "csrfToken"
+						}
+					],
+					"body": "{\"id\":1,\"openid\":\"\",\"avatar\":\"\",\"nickname\":\"test\",\"sex\":1,\"address\":\"\",\"signature\":\"\",\"coin\":2098,\"win\":25,\"kill_most\":99,\"kill_average\":11,\"kill_total\":22,\"survival_time_most\":1200,\"survival_time_average\":660,\"survival_time_total\":1320,\"rank_best\":0,\"rank_current\":0,\"rank_cd\":0,\"challenge_cd\":0,\"challenge_rate\":100,\"dan_best\":0,\"dan_current\":0,\"play_times\":2,\"create_time\":0,\"modify_time\":0}"
+				}
+			]
+		},
+		{
+			"name": "用户 - 列表",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "132d04f0-4ee0-434c-9748-ea4c33939287",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:7001/api/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"users"
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "4c26c3ae-098f-4222-a29b-dbea7e4b7185",
+					"name": "成功",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://127.0.0.1:7001/api/users",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "7001",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Accept-Ranges",
+							"value": "bytes",
+							"name": "Accept-Ranges",
+							"description": "Content-Types that are acceptable"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 29 Mar 2018 06:29:58 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "content-length",
+							"value": "967",
+							"name": "content-length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"name": "content-type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "keep-alive",
+							"value": "timeout=5",
+							"name": "keep-alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff",
+							"name": "x-content-type-options",
+							"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+						},
+						{
+							"key": "x-download-options",
+							"value": "noopen",
+							"name": "x-download-options",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN",
+							"name": "x-frame-options",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						},
+						{
+							"key": "x-readtime",
+							"value": "18",
+							"name": "x-readtime",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "1; mode=block",
+							"name": "x-xss-protection",
+							"description": "Cross-site scripting (XSS) filter"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Tue Jan 19 2038 11:14:07 GMT+0800 (中国标准时间)",
+							"httpOnly": false,
+							"domain": "127.0.0.1",
+							"path": "/",
+							"secure": false,
+							"value": "ghh1WNijnBf1RwoXQgingGAH",
+							"key": "csrfToken"
+						}
+					],
+					"body": "{\"page_total\":1,\"page_index\":1,\"data_per_page\":10,\"data_total\":3,\"data\":[{\"id\":1,\"openid\":\"\",\"avatar\":\"\",\"nickname\":\"test\",\"sex\":1,\"address\":\"\",\"signature\":\"\",\"coin\":998,\"win\":1,\"kill_most\":99,\"kill_average\":55,\"survival_time_most\":123,\"survival_time_average\":66,\"rank_best\":0,\"rank_current\":0,\"rank_cd\":0,\"challenge_cd\":0,\"challenge_rate\":100,\"dan_best\":0,\"dan_current\":0},{\"id\":2,\"openid\":\"\",\"avatar\":\"\",\"nickname\":\"test2\",\"sex\":1,\"address\":\"1\",\"signature\":\"1\",\"coin\":1,\"win\":1,\"kill_most\":1,\"kill_average\":1,\"survival_time_most\":1,\"survival_time_average\":1,\"rank_best\":1,\"rank_current\":1,\"rank_cd\":1,\"challenge_cd\":1,\"challenge_rate\":1,\"dan_best\":1,\"dan_current\":1},{\"id\":3,\"openid\":\"111\",\"avatar\":\"\",\"nickname\":\"dsff\",\"sex\":0,\"address\":\"\",\"signature\":\"\",\"coin\":0,\"win\":0,\"kill_most\":0,\"kill_average\":0,\"survival_time_most\":0,\"survival_time_average\":0,\"rank_best\":0,\"rank_current\":0,\"rank_cd\":0,\"challenge_cd\":0,\"challenge_rate\":100,\"dan_best\":0,\"dan_current\":0}]}"
+				}
+			]
+		},
+		{
+			"name": "公告 - 列表",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "127.0.0.1:7001/api/notices",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"notices"
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "e5c3af9a-96c1-4ff6-9f2d-af3b6c3cdf08",
+					"name": "成功",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "127.0.0.1:7001/api/notices",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "7001",
+							"path": [
+								"api",
+								"notices"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Accept-Ranges",
+							"value": "bytes",
+							"name": "Accept-Ranges",
+							"description": "Content-Types that are acceptable"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 10 Apr 2018 03:02:17 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "content-length",
+							"value": "558",
+							"name": "content-length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"name": "content-type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "keep-alive",
+							"value": "timeout=5",
+							"name": "keep-alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff",
+							"name": "x-content-type-options",
+							"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+						},
+						{
+							"key": "x-download-options",
+							"value": "noopen",
+							"name": "x-download-options",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN",
+							"name": "x-frame-options",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						},
+						{
+							"key": "x-readtime",
+							"value": "2",
+							"name": "x-readtime",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "1; mode=block",
+							"name": "x-xss-protection",
+							"description": "Cross-site scripting (XSS) filter"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Tue Jan 19 2038 11:14:07 GMT+0800 (中国标准时间)",
+							"httpOnly": false,
+							"domain": "127.0.0.1",
+							"path": "/",
+							"secure": false,
+							"value": "ghh1WNijnBf1RwoXQgingGAH",
+							"key": "csrfToken"
+						}
+					],
+					"body": "{\"page_total\":1,\"page_index\":1,\"data_per_page\":10,\"data_total\":4,\"data\":[{\"id\":1,\"title\":\"测试公告标题\",\"content\":\"测试公告内容\",\"status\":1,\"create_time\":1522381786,\"modify_time\":0},{\"id\":2,\"title\":\"测试公告标题\",\"content\":\"测试公告内容\",\"status\":0,\"create_time\":1522382252,\"modify_time\":0},{\"id\":3,\"title\":\"测试公告标题\",\"content\":\"测试公告内容\",\"status\":0,\"create_time\":1522382256,\"modify_time\":0},{\"id\":4,\"title\":\"测试公告标题\",\"content\":\"测试公告内容\",\"status\":0,\"create_time\":1522382313,\"modify_time\":0}]}"
+				}
+			]
+		},
+		{
+			"name": "公告 - 新增",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "x-csrf-token",
+						"value": "ghh1WNijnBf1RwoXQgingGAH"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "测试公告标题",
+							"description": "公告标题",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "测试公告内容",
+							"description": "公告内容",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "1",
+							"description": "公告状态，0停用，1启用",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:7001/api/notices",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"notices"
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "6b153e38-bd46-4ca5-9834-607bca1a9f65",
+					"name": "失败",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"disabled": false
+							},
+							{
+								"key": "x-csrf-token",
+								"value": "ghh1WNijnBf1RwoXQgingGAH",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "测试公告标题",
+									"description": "公告标题",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "测试公告内容",
+									"description": "公告内容",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"description": "公告状态，0停用，1启用",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "127.0.0.1:7001/api/notices",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "7001",
+							"path": [
+								"api",
+								"notices"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Accept-Ranges",
+							"value": "bytes",
+							"name": "Accept-Ranges",
+							"description": "Content-Types that are acceptable"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 30 Mar 2018 05:08:36 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "content-length",
+							"value": "38",
+							"name": "content-length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"name": "content-type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "keep-alive",
+							"value": "timeout=5",
+							"name": "keep-alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff",
+							"name": "x-content-type-options",
+							"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+						},
+						{
+							"key": "x-download-options",
+							"value": "noopen",
+							"name": "x-download-options",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN",
+							"name": "x-frame-options",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						},
+						{
+							"key": "x-readtime",
+							"value": "16",
+							"name": "x-readtime",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "1; mode=block",
+							"name": "x-xss-protection",
+							"description": "Cross-site scripting (XSS) filter"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Tue Jan 19 2038 11:14:07 GMT+0800 (中国标准时间)",
+							"httpOnly": false,
+							"domain": "127.0.0.1",
+							"path": "/",
+							"secure": false,
+							"value": "ghh1WNijnBf1RwoXQgingGAH",
+							"key": "csrfToken"
+						}
+					],
+					"body": "{\"code\":0,\"message\":\"创建失败！\"}"
+				},
+				{
+					"id": "98c16b70-e7d7-4ca8-bed4-675938af9625",
+					"name": "成功",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "测试公告标题",
+									"description": "公告标题",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "测试公告内容",
+									"description": "公告内容",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"description": "公告状态，0停用，1启用",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "127.0.0.1:7001/api/notices",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "7001",
+							"path": [
+								"api",
+								"notices"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Accept-Ranges",
+							"value": "bytes",
+							"name": "Accept-Ranges",
+							"description": "Content-Types that are acceptable"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 10 Apr 2018 03:02:36 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "content-length",
+							"value": "15",
+							"name": "content-length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"name": "content-type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "keep-alive",
+							"value": "timeout=5",
+							"name": "keep-alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff",
+							"name": "x-content-type-options",
+							"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+						},
+						{
+							"key": "x-download-options",
+							"value": "noopen",
+							"name": "x-download-options",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN",
+							"name": "x-frame-options",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						},
+						{
+							"key": "x-readtime",
+							"value": "2",
+							"name": "x-readtime",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "1; mode=block",
+							"name": "x-xss-protection",
+							"description": "Cross-site scripting (XSS) filter"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Tue Jan 19 2038 11:14:07 GMT+0800 (中国标准时间)",
+							"httpOnly": false,
+							"domain": "127.0.0.1",
+							"path": "/",
+							"secure": false,
+							"value": "ghh1WNijnBf1RwoXQgingGAH",
+							"key": "csrfToken"
+						}
+					],
+					"body": "{\"notice_id\":5}"
+				}
+			]
+		},
+		{
+			"name": "战斗 - 提交战绩",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "x-csrf-token",
+						"value": "ghh1WNijnBf1RwoXQgingGAH"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"description": "用户ID",
+							"type": "text"
+						},
+						{
+							"key": "coin_count",
+							"value": "100",
+							"description": "金币数量",
+							"type": "text"
+						},
+						{
+							"key": "is_win",
+							"value": "1",
+							"description": "是否吃鸡",
+							"type": "text"
+						},
+						{
+							"key": "kill_count",
+							"value": "2",
+							"description": "击杀数量",
+							"type": "text"
+						},
+						{
+							"key": "survival_time",
+							"value": "120",
+							"description": "生存时间",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:7001/api/battles",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"battles"
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "546b9d11-08c0-4563-a5ec-4db435a0de9f",
+					"name": "成功",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_id",
+									"value": "1",
+									"description": "用户ID",
+									"type": "text"
+								},
+								{
+									"key": "coin_count",
+									"value": "100",
+									"description": "金币数量",
+									"type": "text"
+								},
+								{
+									"key": "is_win",
+									"value": "1",
+									"description": "是否吃鸡",
+									"type": "text"
+								},
+								{
+									"key": "kill_count",
+									"value": "2",
+									"description": "击杀数量",
+									"type": "text"
+								},
+								{
+									"key": "survival_time",
+									"value": "120",
+									"description": "生存时间",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "127.0.0.1:7001/api/battles",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "7001",
+							"path": [
+								"api",
+								"battles"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Accept-Ranges",
+							"value": "bytes",
+							"name": "Accept-Ranges",
+							"description": "Content-Types that are acceptable"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 10 Apr 2018 03:02:49 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "content-length",
+							"value": "7",
+							"name": "content-length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "content-type",
+							"value": "text/plain; charset=utf-8",
+							"name": "content-type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "keep-alive",
+							"value": "timeout=5",
+							"name": "keep-alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff",
+							"name": "x-content-type-options",
+							"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+						},
+						{
+							"key": "x-download-options",
+							"value": "noopen",
+							"name": "x-download-options",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN",
+							"name": "x-frame-options",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						},
+						{
+							"key": "x-readtime",
+							"value": "5",
+							"name": "x-readtime",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "1; mode=block",
+							"name": "x-xss-protection",
+							"description": "Cross-site scripting (XSS) filter"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Tue Jan 19 2038 11:14:07 GMT+0800 (中国标准时间)",
+							"httpOnly": false,
+							"domain": "127.0.0.1",
+							"path": "/",
+							"secure": false,
+							"value": "ghh1WNijnBf1RwoXQgingGAH",
+							"key": "csrfToken"
+						}
+					],
+					"body": "Created"
+				}
+			]
+		},
+		{
+			"name": "加解密测试",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "x-csrf-token",
+						"value": "ghh1WNijnBf1RwoXQgingGAH"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"description": "用户ID",
+							"type": "text"
+						},
+						{
+							"key": "coin_count",
+							"value": "100",
+							"description": "金币数量",
+							"type": "text"
+						},
+						{
+							"key": "is_win",
+							"value": "1",
+							"description": "是否吃鸡",
+							"type": "text"
+						},
+						{
+							"key": "kill_count",
+							"value": "2",
+							"description": "击杀数量",
+							"type": "text"
+						},
+						{
+							"key": "survival_time",
+							"value": "120",
+							"description": "生存时间",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:7001/api/battles/test_crypto",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"battles",
+						"test_crypto"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "战斗 - 请求晋级",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "127.0.0.1:7001/api/dan/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"dan",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "9e6ba11d-6fa8-4c20-8caa-19d8a22e6462",
+					"name": "成功",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "127.0.0.1:7001/api/dan/1",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "7001",
+							"path": [
+								"api",
+								"dan",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Accept-Ranges",
+							"value": "bytes",
+							"name": "Accept-Ranges",
+							"description": "Content-Types that are acceptable"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 Apr 2018 10:29:11 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "content-length",
+							"value": "26",
+							"name": "content-length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"name": "content-type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "keep-alive",
+							"value": "timeout=5",
+							"name": "keep-alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff",
+							"name": "x-content-type-options",
+							"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+						},
+						{
+							"key": "x-download-options",
+							"value": "noopen",
+							"name": "x-download-options",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN",
+							"name": "x-frame-options",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						},
+						{
+							"key": "x-readtime",
+							"value": "17",
+							"name": "x-readtime",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "1; mode=block",
+							"name": "x-xss-protection",
+							"description": "Cross-site scripting (XSS) filter"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Tue Jan 19 2038 11:14:07 GMT+0800 (中国标准时间)",
+							"httpOnly": false,
+							"domain": "127.0.0.1",
+							"path": "/",
+							"secure": false,
+							"value": "ghh1WNijnBf1RwoXQgingGAH",
+							"key": "csrfToken"
+						}
+					],
+					"body": "{\"code\":1,\"msg\":\"success\"}"
+				}
+			]
+		},
+		{
+			"name": "战斗 - 请求挑战",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "127.0.0.1:7001/api/challenge/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"challenge",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "b0da9444-fc9b-4df9-a8bb-98b591f1235e",
+					"name": "成功",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "127.0.0.1:7001/api/challenge/1",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "7001",
+							"path": [
+								"api",
+								"challenge",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Accept-Ranges",
+							"value": "bytes",
+							"name": "Accept-Ranges",
+							"description": "Content-Types that are acceptable"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 Apr 2018 10:29:23 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "content-length",
+							"value": "26",
+							"name": "content-length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"name": "content-type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "keep-alive",
+							"value": "timeout=5",
+							"name": "keep-alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff",
+							"name": "x-content-type-options",
+							"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+						},
+						{
+							"key": "x-download-options",
+							"value": "noopen",
+							"name": "x-download-options",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN",
+							"name": "x-frame-options",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						},
+						{
+							"key": "x-readtime",
+							"value": "15",
+							"name": "x-readtime",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "1; mode=block",
+							"name": "x-xss-protection",
+							"description": "Cross-site scripting (XSS) filter"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Tue Jan 19 2038 11:14:07 GMT+0800 (中国标准时间)",
+							"httpOnly": false,
+							"domain": "127.0.0.1",
+							"path": "/",
+							"secure": false,
+							"value": "ghh1WNijnBf1RwoXQgingGAH",
+							"key": "csrfToken"
+						}
+					],
+					"body": "{\"code\":1,\"msg\":\"success\"}"
+				}
+			]
+		},
+		{
+			"name": "排行榜 - 用户 - 列表",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "132d04f0-4ee0-434c-9748-ea4c33939287",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:7001/api/rank/user/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"rank",
+						"user",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "b578fd6e-2fb8-4bcd-8006-b365246d7d68",
+					"name": "成功",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://127.0.0.1:7001/api/rank/user/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "7001",
+							"path": [
+								"api",
+								"rank",
+								"user",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Accept-Ranges",
+							"value": "bytes",
+							"name": "Accept-Ranges",
+							"description": "Content-Types that are acceptable"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 Apr 2018 10:21:35 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "content-length",
+							"value": "261",
+							"name": "content-length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"name": "content-type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "keep-alive",
+							"value": "timeout=5",
+							"name": "keep-alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff",
+							"name": "x-content-type-options",
+							"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+						},
+						{
+							"key": "x-download-options",
+							"value": "noopen",
+							"name": "x-download-options",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN",
+							"name": "x-frame-options",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						},
+						{
+							"key": "x-readtime",
+							"value": "35",
+							"name": "x-readtime",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "1; mode=block",
+							"name": "x-xss-protection",
+							"description": "Cross-site scripting (XSS) filter"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Tue Jan 19 2038 11:14:07 GMT+0800 (中国标准时间)",
+							"httpOnly": false,
+							"domain": "127.0.0.1",
+							"path": "/",
+							"secure": false,
+							"value": "ghh1WNijnBf1RwoXQgingGAH",
+							"key": "csrfToken"
+						}
+					],
+					"body": "[{\"id\":1,\"avatar\":\"\",\"nickname\":\"test\",\"dan_current\":0,\"score\":0},{\"id\":3,\"avatar\":\"\",\"nickname\":\"dsff\",\"dan_current\":0,\"score\":0},{\"id\":4,\"avatar\":\"\",\"nickname\":\"dsff\",\"dan_current\":0,\"score\":0},{\"id\":5,\"avatar\":\"\",\"nickname\":\"dsff\",\"dan_current\":0,\"score\":0}]"
+				}
+			]
+		},
+		{
+			"name": "排行榜 - 段位 - 列表",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "132d04f0-4ee0-434c-9748-ea4c33939287",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:7001/api/rank/list_dan",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"rank",
+						"list_dan"
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "4de1d53d-73bf-4ca7-8f4c-c24584fcfc63",
+					"name": "成功",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://127.0.0.1:7001/api/rank/list_dan",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "7001",
+							"path": [
+								"api",
+								"rank",
+								"list_dan"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Accept-Ranges",
+							"value": "bytes",
+							"name": "Accept-Ranges",
+							"description": "Content-Types that are acceptable"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 Apr 2018 10:28:34 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "content-length",
+							"value": "101",
+							"name": "content-length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"name": "content-type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "keep-alive",
+							"value": "timeout=5",
+							"name": "keep-alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff",
+							"name": "x-content-type-options",
+							"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+						},
+						{
+							"key": "x-download-options",
+							"value": "noopen",
+							"name": "x-download-options",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN",
+							"name": "x-frame-options",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						},
+						{
+							"key": "x-readtime",
+							"value": "76",
+							"name": "x-readtime",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "1; mode=block",
+							"name": "x-xss-protection",
+							"description": "Cross-site scripting (XSS) filter"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Tue Jan 19 2038 11:14:07 GMT+0800 (中国标准时间)",
+							"httpOnly": false,
+							"domain": "127.0.0.1",
+							"path": "/",
+							"secure": false,
+							"value": "ghh1WNijnBf1RwoXQgingGAH",
+							"key": "csrfToken"
+						}
+					],
+					"body": "{\"1\":[{\"id\":2,\"avatar\":\"\",\"nickname\":\"test2\",\"dan_current\":1,\"score\":0}],\"2\":[],\"3\":[],\"4\":[],\"5\":[]}"
+				}
+			]
+		},
+		{
+			"name": "排行榜 - 所有 - 列表",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "132d04f0-4ee0-434c-9748-ea4c33939287",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:7001/api/rank",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"rank"
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "3f196639-879c-4814-851f-7f7568d9ce92",
+					"name": "成功",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://127.0.0.1:7001/api/rank",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "7001",
+							"path": [
+								"api",
+								"rank"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Accept-Ranges",
+							"value": "bytes",
+							"name": "Accept-Ranges",
+							"description": "Content-Types that are acceptable"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 13 Apr 2018 03:39:43 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "content-length",
+							"value": "2180",
+							"name": "content-length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"name": "content-type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "keep-alive",
+							"value": "timeout=5",
+							"name": "keep-alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff",
+							"name": "x-content-type-options",
+							"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+						},
+						{
+							"key": "x-download-options",
+							"value": "noopen",
+							"name": "x-download-options",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN",
+							"name": "x-frame-options",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						},
+						{
+							"key": "x-readtime",
+							"value": "13",
+							"name": "x-readtime",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "1; mode=block",
+							"name": "x-xss-protection",
+							"description": "Cross-site scripting (XSS) filter"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Tue Jan 19 2038 11:14:07 GMT+0800 (中国标准时间)",
+							"httpOnly": false,
+							"domain": "127.0.0.1",
+							"path": "/",
+							"secure": false,
+							"value": "ghh1WNijnBf1RwoXQgingGAH",
+							"key": "csrfToken"
+						}
+					],
+					"body": "[{\"id\":2,\"openid\":\"\",\"avatar\":\"\",\"nickname\":\"test2\",\"sex\":1,\"address\":\"1\",\"signature\":\"1\",\"coin\":1,\"score\":0,\"win\":1,\"kill_most\":1,\"kill_average\":1,\"kill_total\":0,\"survival_time_most\":1,\"survival_time_average\":1,\"survival_time_total\":0,\"rank_best\":1,\"rank_current\":1,\"challenge_time\":1,\"challenge_rate\":1,\"star\":0,\"dan_best\":1,\"dan_current\":1,\"dan_time\":1,\"play_times\":0,\"challenge_times\":0,\"create_time\":0,\"modify_time\":0},{\"id\":1,\"openid\":\"\",\"avatar\":\"\",\"nickname\":\"test\",\"sex\":1,\"address\":\"\",\"signature\":\"\",\"coin\":2198,\"score\":0,\"win\":26,\"kill_most\":99,\"kill_average\":8,\"kill_total\":24,\"survival_time_most\":1200,\"survival_time_average\":480,\"survival_time_total\":1440,\"rank_best\":0,\"rank_current\":0,\"challenge_time\":0,\"challenge_rate\":100,\"star\":0,\"dan_best\":0,\"dan_current\":0,\"dan_time\":0,\"play_times\":3,\"challenge_times\":0,\"create_time\":0,\"modify_time\":1523329369},{\"id\":3,\"openid\":\"111\",\"avatar\":\"\",\"nickname\":\"dsff\",\"sex\":0,\"address\":\"\",\"signature\":\"\",\"coin\":0,\"score\":0,\"win\":0,\"kill_most\":0,\"kill_average\":0,\"kill_total\":0,\"survival_time_most\":0,\"survival_time_average\":0,\"survival_time_total\":0,\"rank_best\":0,\"rank_current\":0,\"challenge_time\":0,\"challenge_rate\":100,\"star\":0,\"dan_best\":0,\"dan_current\":0,\"dan_time\":0,\"play_times\":0,\"challenge_times\":0,\"create_time\":0,\"modify_time\":0},{\"id\":4,\"openid\":\"111\",\"avatar\":\"\",\"nickname\":\"dsff\",\"sex\":0,\"address\":\"\",\"signature\":\"\",\"coin\":0,\"score\":0,\"win\":0,\"kill_most\":0,\"kill_average\":0,\"kill_total\":0,\"survival_time_most\":0,\"survival_time_average\":0,\"survival_time_total\":0,\"rank_best\":0,\"rank_current\":0,\"challenge_time\":0,\"challenge_rate\":100,\"star\":0,\"dan_best\":0,\"dan_current\":0,\"dan_time\":0,\"play_times\":0,\"challenge_times\":0,\"create_time\":1523329261,\"modify_time\":1523329261},{\"id\":5,\"openid\":\"111\",\"avatar\":\"\",\"nickname\":\"dsff\",\"sex\":0,\"address\":\"\",\"signature\":\"\",\"coin\":0,\"score\":0,\"win\":0,\"kill_most\":0,\"kill_average\":0,\"kill_total\":0,\"survival_time_most\":0,\"survival_time_average\":0,\"survival_time_total\":0,\"rank_best\":0,\"rank_current\":0,\"challenge_time\":0,\"challenge_rate\":100,\"star\":0,\"dan_best\":0,\"dan_current\":0,\"dan_time\":0,\"play_times\":0,\"challenge_times\":0,\"create_time\":1523329468,\"modify_time\":1523329468}]"
+				}
+			]
+		},
+		{
+			"name": "规则  - 列表",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "132d04f0-4ee0-434c-9748-ea4c33939287",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:7001/api/rule",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"rule"
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "35b2a5ab-f7cf-4c35-bd20-ccb70a10338d",
+					"name": "成功",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://127.0.0.1:7001/api/rule",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "7001",
+							"path": [
+								"api",
+								"rule"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Accept-Ranges",
+							"value": "bytes",
+							"name": "Accept-Ranges",
+							"description": "Content-Types that are acceptable"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 13 Apr 2018 03:38:18 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "content-length",
+							"value": "402",
+							"name": "content-length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"name": "content-type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "keep-alive",
+							"value": "timeout=5",
+							"name": "keep-alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff",
+							"name": "x-content-type-options",
+							"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+						},
+						{
+							"key": "x-download-options",
+							"value": "noopen",
+							"name": "x-download-options",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN",
+							"name": "x-frame-options",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						},
+						{
+							"key": "x-readtime",
+							"value": "17",
+							"name": "x-readtime",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "1; mode=block",
+							"name": "x-xss-protection",
+							"description": "Cross-site scripting (XSS) filter"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Tue Jan 19 2038 11:14:07 GMT+0800 (中国标准时间)",
+							"httpOnly": false,
+							"domain": "127.0.0.1",
+							"path": "/",
+							"secure": false,
+							"value": "ghh1WNijnBf1RwoXQgingGAH",
+							"key": "csrfToken"
+						}
+					],
+					"body": "[{\"id\":1,\"title\":\"战斗规则\",\"content\":\"这是战斗规则\",\"modify_time\":0},{\"id\":2,\"title\":\"积分规则\",\"content\":\"这是积分规则\",\"modify_time\":0},{\"id\":3,\"title\":\"排行榜规则\",\"content\":\"这是排行榜规则\",\"modify_time\":0},{\"id\":4,\"title\":\"挑战规则\",\"content\":\"这是挑战规则\",\"modify_time\":0},{\"id\":5,\"title\":\"晋级规则\",\"content\":\"这是晋级规则\",\"modify_time\":0}]"
+				}
+			]
+		},
+		{
+			"name": "规则 - 详情",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:7001/api/rule/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"rule",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "bf75831c-1358-4752-a96f-0087b83162b7",
+					"name": "成功",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://127.0.0.1:7001/api/rule/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "7001",
+							"path": [
+								"api",
+								"rule",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Accept-Ranges",
+							"value": "bytes",
+							"name": "Accept-Ranges",
+							"description": "Content-Types that are acceptable"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 13 Apr 2018 03:40:34 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "content-length",
+							"value": "78",
+							"name": "content-length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"name": "content-type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "keep-alive",
+							"value": "timeout=5",
+							"name": "keep-alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff",
+							"name": "x-content-type-options",
+							"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+						},
+						{
+							"key": "x-download-options",
+							"value": "noopen",
+							"name": "x-download-options",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN",
+							"name": "x-frame-options",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						},
+						{
+							"key": "x-readtime",
+							"value": "14",
+							"name": "x-readtime",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "1; mode=block",
+							"name": "x-xss-protection",
+							"description": "Cross-site scripting (XSS) filter"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Tue Jan 19 2038 11:14:07 GMT+0800 (中国标准时间)",
+							"httpOnly": false,
+							"domain": "127.0.0.1",
+							"path": "/",
+							"secure": false,
+							"value": "ghh1WNijnBf1RwoXQgingGAH",
+							"key": "csrfToken"
+						}
+					],
+					"body": "{\"id\":1,\"title\":\"战斗规则\",\"content\":\"这是战斗规则\",\"modify_time\":0}"
+				}
+			]
+		},
+		{
+			"name": "规则 - 修改",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "content",
+							"value": "修改后的战斗规则",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:7001/api/rule/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"rule",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "d751212f-884c-4185-8cca-ca8bcd4a199a",
+					"name": "成功",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "content",
+									"value": "修改后的战斗规则",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:7001/api/rule/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "7001",
+							"path": [
+								"api",
+								"rule",
+								"1"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Accept-Ranges",
+							"value": "bytes",
+							"name": "Accept-Ranges",
+							"description": "Content-Types that are acceptable"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 13 Apr 2018 03:41:47 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "keep-alive",
+							"value": "timeout=5",
+							"name": "keep-alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff",
+							"name": "x-content-type-options",
+							"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+						},
+						{
+							"key": "x-download-options",
+							"value": "noopen",
+							"name": "x-download-options",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN",
+							"name": "x-frame-options",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						},
+						{
+							"key": "x-readtime",
+							"value": "182",
+							"name": "x-readtime",
+							"description": "Custom header"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "1; mode=block",
+							"name": "x-xss-protection",
+							"description": "Cross-site scripting (XSS) filter"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Tue Jan 19 2038 11:14:07 GMT+0800 (中国标准时间)",
+							"httpOnly": false,
+							"domain": "127.0.0.1",
+							"path": "/",
+							"secure": false,
+							"value": "ghh1WNijnBf1RwoXQgingGAH",
+							"key": "csrfToken"
+						}
+					],
+					"body": ""
+				}
+			]
+		}
+	]
+}

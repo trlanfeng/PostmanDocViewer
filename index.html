@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>interface</title>
+    <link rel="stylesheet" href="bootstrap4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="jsoneditor/jsoneditor.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div id="app" class="container-fluid">
+        <div class="row page">
+            <div class="menu">
+                <div class="page_title">{{info.name}}</div>
+                <ul class="list">
+                    <li v-for="item,index in data">
+                        <a :href="'#mao'+index" style="color:#333;text-decoration: none;">
+                            <span :class="item.request.method">{{item.request.method}}</span>
+                            {{item.name}}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="container-fluid">
+                <div class="one" v-for="item,index in data">
+                    <h3>
+                        <a :name="'mao'+index">{{item.name}}</a>
+                    </h3>
+                    <div class="req_url" :class="item.request.method">
+                        <div class="http_method" :class="item.request.method">{{item.request.method}}</div>
+                        <div class="url">{{item.request.url.raw}}</div>
+                    </div>
+                    <div class="req_headers">
+                        <p class="title">请求头</p>
+                        <table class="content table table-bordered">
+                            <thead>
+                                <tr>
+                                    <td>参数名</td>
+                                    <td>参数值</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="item1 in item.request.header">
+                                    <td>{{item1.key}}</td>
+                                    <td>{{item1.value}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="req_body">
+                        <p class="title">请求体</p>
+                        <table class="content table table-bordered">
+                            <thead>
+                                <tr>
+                                    <td>参数名</td>
+                                    <td>参数值（示例）</td>
+                                    <td>描述</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="item2 in item.request.body.urlencoded">
+                                    <td>{{item2.key}}</td>
+                                    <td>{{item2.value}}</td>
+                                    <td>{{item2.description}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="res_body">
+                        <p class="title">响应体</p>
+                        <div class="content" v-if="item.response.length!=0">
+                            <div class="json_container">
+                                <div class="json_text" style="display: none;">{{item.response[0].body}}</div>
+                            </div>
+                        </div>
+                        <div class="content" v-else>
+                            暂无返回值
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="bootstrap4/js/bootstrap.bundle.min.js"></script>
+    <script src="jsoneditor/jsoneditor.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
